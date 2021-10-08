@@ -1,26 +1,28 @@
-body  		{font-family: Verdana, Arial, sans-serif; font-size: 12pt; font-weight: normal; color: #ffffff; background: #484848;}
+body  		{font-family: Verdana, Arial, sans-serif; font-size: 14pt; font-weight: normal; color: #ffffff; background: #484848;}
 /* table 		{font-family: Arial, sans-serif; font-size: 12pt; font-weight: normal; color: #ffffff; background: #101020;} */
 a 		    {color: #aaaaff; background-color: transparent; text-decoration: none;}
 a:visited {color: #aaaaff; background-color: transparent; text-decoration: none;}
 a:hover 	{color: #ffaa00; background-color: transparent; text-decoration: underline;}
-i         {color: #c0c0c0; font-size: 10pt;}
+i         {color: #c0c0c0; font-size: 12pt;}
 img       {behavior: vertical-align: middle;}
-ul        {padding: 1em; margin: 0; text-align: left; width: 100%;}
-li {       list-style-position: inside;    text-indent: -1em;    padding-left: 1em; margin: 0.5em 1.0em; margin-top: 1em;}
-h2        {margin: 1em; color: #ffffff; font-size: 12pt; font-weight: normal;}
 
 .wob {
-  background-color: #323232; 
-  width: 80%;
-  padding:10px;  
+  background-color: #303030; 
+  width: 85%;
+  padding:12px;  
   border: 2px solid #c0c0c0;
-  border-radius: 25px 15px 25px 15px; 
+  border-radius: 15px 35px 15px 35px; 
   border-spacing:0px; 
   border-collapse:separate; 
   display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
-.wob h2 {white-space: pre}
+.wob h2 { font-size: 16pt; font-weight: normal; padding-left: 1em; padding-right: 1em; white-space: pre;}
+.wob ul { padding: 0.5em; margin: 0; text-align: left; width: 100%;}
+.wob li { list-style-position: inside; padding-left: 1em; margin: 1em 1.0em;}
 
