@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<H1>&nbsp;</H1>
+  {% if referencetype_list %}
+     {% for l in referencetype_list %}
+        <div class='wob'>
+        {% if l.name == view.kwargs.stub %}
+          <h2><font size="+2" color="#ffff00">{{ l.decor }}</font>  &nbsp; {{ l.title }}</h2>
+          {% if l.reference_set.all %}
+            <ul>
+            {% for el in l.reference_set.all %}
+                  <li><a href="{{ el.get_url }}" target="_blank">{{ el.title }}</a> <i> {{el.summary}} </i> 
+              {% if el.year %} 
+              <span style="float:right">({{el.year}})</span> </li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% else %}
+        <h2><font size="+2" color="#ffff00">{{ l.decor }}</font>  &nbsp; <a href="{{ l.get_absolute_url }}">{{ l.title }}</a></h2> 
+        {% endif %}
+        </div> 
+      {% endfor %}
+
+  {% else %}
+      <p>There are no books in the library.</p>
+  {% endif %} 
+{% endblock %}
