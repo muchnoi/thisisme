@@ -9,7 +9,7 @@
           {% if l.reference_set.all %}
             <ul>
             {% for el in l.reference_set.all %}
-                  <li><a href="{{ el.get_url }}" target="_blank">{{ el.title }}</a> <i> {{el.summary}} </i> 
+                  <li><a href="{{ el.get_url }}" target="_blank">{{ el.title }}</a> <br><i> {{el.summary}} </i> 
               {% if el.year %} 
               <span style="float:right">({{el.year}})</span> </li>
               {% endif %}

@@ -36,7 +36,7 @@ class Reference(models.Model):
   exturl  = models.URLField(default = '', blank=True, null=True)
   
   class Meta:
-    ordering = ["title", "-year"]
+    ordering = ["-year", "title"]
 
   def get_url(self):
       """
