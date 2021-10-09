@@ -29,7 +29,7 @@ class Reference(models.Model):
   Model representing one reference item.
   """
   title   = models.CharField(max_length=300)
-  summary = models.TextField(max_length=500, help_text="A brief description of the reference")
+  summary = models.TextField(max_length=500, blank=True, help_text="A brief description of the reference")
   itype   = models.ForeignKey(ReferenceType, on_delete=models.SET_NULL, null=True)
   year    = models.PositiveIntegerField(default=1970, blank=True, null=True)
   upload  = models.FileField(upload_to='static/', default = '', blank=True, null=True)
