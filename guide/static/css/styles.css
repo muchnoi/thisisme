@@ -26,3 +26,10 @@ img       {behavior: vertical-align: middle;}
 .wob ul { padding: 0.5em; margin: 0; text-align: left; width: 100%;}
 .wob li { list-style-position: inside; padding-left: 1em; margin: 1em 1.0em;}
 
+.end {
+  background-color: #000000; 
+  border-radius: 5px 5px 35px 35px;
+  margin-top: 40px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  }
