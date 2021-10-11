@@ -43,8 +43,8 @@ a:hover 	{color: #ffaa00; background-color: transparent; text-decoration: underl
 
 .end {
   background-color: #000000; 
-  border-radius: 5px 5px 35px 35px;
-  margin-top: 40px;
+  border-radius: 35px 35px 35px 35px;
+  margin-top: 30px;
   padding-top: 0px;
   padding-bottom: 0px;
   }
