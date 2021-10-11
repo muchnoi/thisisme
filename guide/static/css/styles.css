@@ -1,10 +1,25 @@
-body  		{font-family: Verdana, Arial, sans-serif; font-size: 14pt; font-weight: normal; color: #ffffff; background: #484848;}
-/* table 		{font-family: Arial, sans-serif; font-size: 12pt; font-weight: normal; color: #ffffff; background: #101020;} */
+/*body  		{font-family: Verdana, Arial, sans-serif; font-size: 14pt; font-weight: normal; color: #ffffff; background: #484848;}*/
+body {
+  font-family: Verdana, Arial, sans-serif; 
+  font-size: calc(0.5em + 1vmin);
+  font-weight: normal; 
+  color: #ffffff; 
+  background: #484848;
+  }
+  
+h2 {
+  font-size: calc(0.6em + 1.1vmin); 
+  font-weight: normal;
+  }
+
+i {
+  color: #c0c0c0; 
+  font-size: calc(0.4em + 0.8vmin);
+  }
+
 a 		    {color: #aaaaff; background-color: transparent; text-decoration: none;}
 a:visited {color: #aaaaff; background-color: transparent; text-decoration: none;}
 a:hover 	{color: #ffaa00; background-color: transparent; text-decoration: underline;}
-i         {color: #c0c0c0; font-size: 12pt;}
-img       {behavior: vertical-align: middle;}
 
 .wob {
   background-color: #303030; 
@@ -22,7 +37,7 @@ img       {behavior: vertical-align: middle;}
   
 }
 
-.wob h2 { font-size: 16pt; font-weight: normal; padding-left: 1em; padding-right: 1em; white-space: pre;}
+.wob h2 { padding-left: 1em; padding-right: 1em; white-space: pre;}
 .wob ul { padding: 0.5em; margin: 0; text-align: left; width: 100%;}
 .wob li { list-style-position: inside; padding-left: 1em; margin: 1em 1.0em;}
 
