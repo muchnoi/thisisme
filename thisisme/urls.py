@@ -18,10 +18,10 @@ from django.urls import path, include
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.contrib.sitemaps.views import sitemap
-from guide.sitemaps import ReferenceSitemap
+from guide.sitemaps import ItemsSitemap
 
 sitemaps = {
-    'references': ReferenceSitemap,
+    'references': ItemsSitemap,
 }
 
 

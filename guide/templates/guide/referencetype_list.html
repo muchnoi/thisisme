@@ -5,6 +5,9 @@
      {% for l in referencetype_list %}
         <div class='wob'>
         {% if l.name == view.kwargs.stub %}
+          {% block metadescription %}
+          <meta name="description" content="{{ l.get_description }}">
+          {% endblock %}
           <h2><font size="+2" color="#ffff00">{{ l.decor }}</font>  &nbsp; {{ l.title }}</h2>
           {% if l.reference_set.all %}
             <ul>

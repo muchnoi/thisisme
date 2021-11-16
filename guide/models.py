@@ -16,6 +16,13 @@ class ReferenceType(models.Model):
     
   def get_absolute_url(self):
     return ('%s' % self.name)
+
+  def get_description(self):
+    D = str(self.title).split('/')[1].strip()
+    D = D.replace('  ', 'xxx')
+    D = D.replace(' ', '')
+    D = D.replace('xxx', ' ')
+    return D
  
   def __str__(self):
     """
@@ -44,6 +51,8 @@ class Reference(models.Model):
       """
       if self.upload:
         return reverse('view-pdf', args=[str(self.id)])
+      else:
+        return self.exturl
 
   def __str__(self):
       """
