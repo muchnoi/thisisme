@@ -22,6 +22,7 @@ class ReferenceType(models.Model):
     D = D.replace('  ', 'xxx')
     D = D.replace(' ', '')
     D = D.replace('xxx', ' ')
+    D = "The {:s} - {:s} - section of the site.".format(self.name, D.title())
     return D
  
   def __str__(self):
