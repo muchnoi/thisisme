@@ -14,11 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
-#from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.contrib.sitemaps.views import sitemap
 from guide.sitemaps import ItemsSitemap
+from django.views.generic.base import TemplateView
 
 sitemaps = {
     'references': ItemsSitemap,
@@ -30,7 +30,6 @@ urlpatterns = [
   path('guide/', include('guide.urls')),
   path('', RedirectView.as_view(url='/guide/', permanent=False)),
   path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-#  url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-#  path('', views.index, name='index'),
+  path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")), 
   ]
 
