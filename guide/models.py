@@ -38,14 +38,12 @@ class Reference(models.Model):
   class Meta:
     ordering = ["-year", "title"]
 
-  def get_url(self):
+  def get_absolute_url(self):
       """
       Returns the url to access a particular  instance.
       """
       if self.upload:
         return reverse('view-pdf', args=[str(self.id)])
-      elif self.exturl:
-        return self.exturl
 
   def __str__(self):
       """
