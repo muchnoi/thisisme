@@ -18,12 +18,13 @@ class ReferenceType(models.Model):
     return ('%s' % self.name)
 
   def get_description(self):
-    D = str(self.title).split('/')[1].strip()
-    D = D.replace('  ', 'xxx')
-    D = D.replace(' ', '')
-    D = D.replace('xxx', ' ')
-    D = "The {:s} - {:s} - section of the site.".format(self.name, D.title())
-    return D
+    if   'Tuto' in self.name: return 'Materials for students: tutorials and textbooks on optics, etc.'
+    elif 'Publ' in self.name: return 'Selected scientific papers that are most important to me personally.'
+    elif 'Slid' in self.name: return 'A collection of slides I have ever prepared for conferences, workshops, seminars, etc.'
+    elif 'Thes' in self.name: return 'Here are my qualification works.'
+    elif 'Draf' in self.name: return 'Incomplete or unpublished studies which however I do not want to forget.'
+    elif 'Soft' in self.name: return 'Here are the (Github) links to software projects developed by myself.'
+    elif 'Link' in self.name: return 'Some other links to the resources that I visit sometimes.'
  
   def __str__(self):
     """

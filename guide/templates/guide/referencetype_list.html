@@ -1,19 +1,25 @@
 {% extends "base_generic.html" %}
+{% block metadescription %}
+  {% for l in referencetype_list %}
+        {% if l.name == view.kwargs.stub %}
+        <meta name="description" content="{{ l.get_description }}"> 
+        {% endif %}
+  {% endfor %}
+
+{% endblock %}
+
 {% block content %}
 <H1>&nbsp;</H1>
   {% if referencetype_list %}
      {% for l in referencetype_list %}
         <div class='wob'>
         {% if l.name == view.kwargs.stub %}
-          {% block metadescription %}
-          <meta name="description" content="{{ l.get_description }}">
-          {% endblock %}
           <h2><font size="+2" color="#ffff00">{{ l.decor }}</font>  &nbsp; {{ l.title }}</h2>
           {% if l.reference_set.all %}
             <ul>
             {% for el in l.reference_set.all %}
                   <li><a href="{{ el.get_absolute_url }}" target="_blank">{{ el.title }}</a> 
-		  {% if el.summary %} <br><i> {{el.summary}} </i> {% endif %} 
+		              {% if el.summary %} <br><i> {{el.summary}} </i> {% endif %} 
                   {% if el.year %} <span style="float:right">({{el.year}})</span> </li> {% endif %}
             {% endfor %}
             </ul>
